@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>close_button.svg</file>
+    <file>maximize_button.svg</file>
+    <file>minimize_button.svg</file>
+  </qresource>
+  <qresource prefix="logos">
+    <file>logo.svg</file>
+  </qresource>
+</RCC>
