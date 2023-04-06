@@ -1,6 +1,7 @@
-"""
-This file contains the resource data for images (icons,logos,etc...)
-"""
+# Resource object code (Python 3)
+# Created by: object code
+# Created by: The Resource Compiler for Qt version 6.4.3
+# WARNING! All changes made in this file will be lost!
 
 from PySide6 import QtCore
 
@@ -207,6 +208,71 @@ height=\x22190\x22 str\
 oke=\x22#BB86FC\x22 st\
 roke-width=\x2210\x22/\
 >\x0a</svg>\x0a\
+\x00\x00\x03\xe3\
+<\
+svg width=\x2220\x22 h\
+eight=\x2220\x22 viewB\
+ox=\x220 0 20 20\x22 f\
+ill=\x22none\x22 xmlns\
+=\x22http://www.w3.\
+org/2000/svg\x22>\x0a<\
+path d=\x22M12.9166\
+ 11.6667H12.2583\
+L12.025 11.4417C\
+12.5458 10.8366 \
+12.9264 10.124 1\
+3.1396 9.35467C1\
+3.3528 8.58537 1\
+3.3934 7.77846 1\
+3.2583 6.99166C1\
+2.8666 4.67499 1\
+0.9333 2.82499 8\
+.59998 2.54166C7\
+.77966 2.43788 6\
+.94647 2.52314 6\
+.16417 2.7909C5.\
+38186 3.05867 4.\
+67118 3.50184 4.\
+08651 4.08652C3.\
+50183 4.6712 3.0\
+5865 5.38188 2.7\
+9089 6.16418C2.5\
+2312 6.94648 2.4\
+3787 7.77967 2.5\
+4165 8.59999C2.8\
+2498 10.9333 4.6\
+7498 12.8667 6.9\
+9165 13.2583C7.7\
+7844 13.3934 8.5\
+8536 13.3528 9.3\
+5466 13.1396C10.\
+124 12.9264 10.8\
+366 12.5458 11.4\
+416 12.025L11.66\
+66 12.2583V12.91\
+67L15.2083 16.45\
+83C15.55 16.8 16\
+.1083 16.8 16.45\
+ 16.4583C16.7916\
+ 16.1167 16.7916\
+ 15.5583 16.45 1\
+5.2167L12.9166 1\
+1.6667ZM7.91665 \
+11.6667C5.84165 \
+11.6667 4.16665 \
+9.99166 4.16665 \
+7.91666C4.16665 \
+5.84166 5.84165 \
+4.16666 7.91665 \
+4.16666C9.99165 \
+4.16666 11.6666 \
+5.84166 11.6666 \
+7.91666C11.6666 \
+9.99166 9.99165 \
+11.6667 7.91665 \
+11.6667Z\x22 fill=\x22\
+#8F8F8F\x22/>\x0a</svg\
+>\x0a\
 \x00\x00\x00\xa9\
 <\
 svg width=\x2218\x22 h\
@@ -333,6 +399,11 @@ qt_resource_name = b"\
 \x05\xe2T\xa7\
 \x00l\
 \x00o\x00g\x00o\x00.\x00s\x00v\x00g\
+\x00\x11\
+\x0a\x0c\x81\x87\
+\x00s\
+\x00e\x00a\x00r\x00c\x00h\x00_\x00b\x00u\x00t\x00t\x00o\x00n\x00.\x00s\x00v\x00g\
+\
 \x00\x13\
 \x046pg\
 \x00m\
@@ -352,29 +423,26 @@ qt_resource_name = b"\
 qt_resource_struct = b"\
 \x00\x00\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\
 \x00\x00\x00\x00\x00\x00\x00\x00\
-\x00\x00\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x04\
+\x00\x00\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x04\
 \x00\x00\x00\x00\x00\x00\x00\x00\
 \x00\x00\x00\x10\x00\x02\x00\x00\x00\x01\x00\x00\x00\x03\
 \x00\x00\x00\x00\x00\x00\x00\x00\
 \x00\x00\x00 \x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
 \x00\x00\x01\x87Mo\x0b\xdb\
-\x00\x00\x006\x00\x00\x00\x00\x00\x01\x00\x00\x0c~\
+\x00\x00\x00^\x00\x00\x00\x00\x00\x01\x00\x00\x10e\
 \x00\x00\x01\x87Q{\xd7M\
-\x00\x00\x00\x8e\x00\x00\x00\x00\x00\x01\x00\x00\x0f\x0c\
+\x00\x00\x00\xb6\x00\x00\x00\x00\x00\x01\x00\x00\x12\xf3\
 \x00\x00\x01\x87Q{\xa0V\
-\x00\x00\x00b\x00\x00\x00\x00\x00\x01\x00\x00\x0d+\
+\x00\x00\x006\x00\x00\x00\x00\x00\x01\x00\x00\x0c~\
+\x00\x00\x01\x87W\x01\xbf\x83\
+\x00\x00\x00\x8a\x00\x00\x00\x00\x00\x01\x00\x00\x11\x12\
 \x00\x00\x01\x87Q|[\xc1\
 "
 
-
 def qInitResources():
-    QtCore.qRegisterResourceData(
-        0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
-
+    QtCore.qRegisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
 
 def qCleanupResources():
-    QtCore.qUnregisterResourceData(
-        0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
-
+    QtCore.qUnregisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
 
 qInitResources()
