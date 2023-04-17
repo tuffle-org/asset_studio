@@ -4,3 +4,11 @@ __pycache__
 resources/**/*.svg
 resources/**/*.png
 
+# envs
+env
+.env
+.Env
+.ENV
+
+# unix
+*.swp
