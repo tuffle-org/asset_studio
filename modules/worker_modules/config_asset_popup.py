@@ -78,12 +78,14 @@ class AssetWindow(CustomMainWindow):
 
     def _save_project_path(self, text: str) -> None:
         self.project_path = text
-    
+ 
     def _save_asset_type(self, text: str) -> None:
         self.asset_type = text
-    
+
     def _validate_project_name(self) -> None:
         """Validates correct project file name."""
+        if not self.project_name:
+            return
         regex_res = re.search(
             r'[,.!@#$%^&*-+~`?=]|[/()[\]\\:"\'{}|<>]+|^[0-9]',
             self.project_name
