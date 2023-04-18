@@ -1,3 +1,4 @@
+import re
 from modules.custom_widgets.custom_main_window import CustomMainWindow
 from PySide6 import QtCore
 from PySide6.QtCore import Qt, QSize
@@ -21,7 +22,7 @@ class AssetWindow(CustomMainWindow):
         self.height: int = 32
         self.project_name: str = None
         self.project_path: str = None
-        self.asset_type: str = "Sprite"
+        self.asset_type: str = self.__ui.asset_type_combo_box.currentText()
 
 
         # ui changes
@@ -36,10 +37,14 @@ class AssetWindow(CustomMainWindow):
         self.__ui.height_line_edit.textChanged.connect(self._save_height)
         self.__ui.project_name_line_edit.textChanged.connect(self._save_project_name)
         self.__ui.project_path_line_edit.textChanged.connect(self._save_project_path)
+        self.__ui.asset_type_combo_box.currentTextChanged.connect(self._save_asset_type)
 
         self.show()
 
     def _create_new_project(self) -> None:
+        if self._validate_project_name():
+            print("Invalid Project name")
+            return
         if self.project_name and self.project_path:
             print(
                 f"Created Project {self.project_name} at \n",
@@ -57,13 +62,32 @@ class AssetWindow(CustomMainWindow):
         self.__ui.project_path_line_edit.setText(dir)
 
     def _save_width(self, text: str) -> None:
-        self.width = text
+        self.width = int(text)
+        if int(text) > 128:
+            self.width = 128
+            self.__ui.width_line_edit.setText("128")
 
     def _save_height(self, text: str) -> None:
-        self.height = text
+        self.height = int(text)
+        if int(text) > 128:
+            self.height = 128
+            self.__ui.height_line_edit.setText("128")
 
     def _save_project_name(self, text: str) -> None:
         self.project_name = text
 
     def _save_project_path(self, text: str) -> None:
         self.project_path = text
+    
+    def _save_asset_type(self, text: str) -> None:
+        self.asset_type = text
+    
+    def _validate_project_name(self) -> None:
+        """Validates correct project file name."""
+        regex_res = re.search(
+            r'[,.!@#$%^&*-+~`?=]|[/()[\]\\:"\'{}|<>]+|^[0-9]',
+            self.project_name
+        )
+        if regex_res is None:
+            return False
+        return True
