@@ -25,13 +25,13 @@
      <number>0</number>
     </property>
     <property name="leftMargin">
-     <number>10</number>
+     <number>0</number>
     </property>
     <property name="topMargin">
-     <number>5</number>
+     <number>0</number>
     </property>
     <property name="rightMargin">
-     <number>10</number>
+     <number>0</number>
     </property>
     <property name="bottomMargin">
      <number>0</number>
@@ -55,6 +55,9 @@
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
@@ -269,6 +272,9 @@
        <property name="rightMargin">
         <number>0</number>
        </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="__frame_main_left_section">
          <property name="sizePolicy">
@@ -307,7 +313,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="listWidget_project_list"/>
+           <widget class="QListWidget" name="listWidget_project_list">
+            <property name="resizeMode">
+             <enum>QListView::Adjust</enum>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -355,6 +365,11 @@
               <width>200</width>
               <height>40</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>New Project</string>
