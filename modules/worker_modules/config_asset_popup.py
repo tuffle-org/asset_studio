@@ -18,9 +18,13 @@ class AssetWindow(CustomMainWindow):
         self.__ui.setupUi(self)
         self._setMainFrame(self.__ui.main_frame)
 
+        # custom private vars
+        self.__default_width = 32
+        self.__default_height = 32
+
         # custom vars
-        self.width: int = 32
-        self.height: int = 32
+        self.width: int = self.__default_width
+        self.height: int = self.__default_height
         self.project_name: str = None
         self.project_path: str = None
         self.asset_type: str = self.__ui.asset_type_combo_box.currentText()
@@ -67,18 +71,24 @@ class AssetWindow(CustomMainWindow):
             return
 
         print("something went wrong!")
-        
+
     def _save_width(self, text: str) -> None:
-        self.width = int(text)
-        if int(text) > 128:
-            self.width = 128
-            self.__ui.width_line_edit.setText("128")
+        try:
+            self.width = int(text)
+            if int(text) > 128:
+                self.width = 128
+                self.__ui.width_line_edit.setText("128")
+        except ValueError:
+            self.width = self.__default_width
 
     def _save_height(self, text: str) -> None:
-        self.height = int(text)
-        if int(text) > 128:
-            self.height = 128
-            self.__ui.height_line_edit.setText("128")
+        try:
+            self.height = int(text)
+            if int(text) > 128:
+                self.height = 128
+                self.__ui.height_line_edit.setText("128")
+        except ValueError:
+            self.height = self.__default_height
 
     def _save_project_name(self, text: str) -> None:
         self.project_name = text
