@@ -1,3 +1,4 @@
+import os
 import re
 from modules.custom_widgets.custom_main_window import CustomMainWindow
 from PySide6 import QtCore
@@ -54,13 +55,19 @@ class AssetWindow(CustomMainWindow):
             self.close()
 
     def _fetch_project_path(self) -> None:
-        dir = QFileDialog.getExistingDirectory(
-            self, "Select Directory",
-            "/home",
-            QFileDialog.ShowDirsOnly #| QFileDialog.DontResolveSymlinks
-        )
-        self.__ui.project_path_line_edit.setText(dir)
+        home_dir = os.environ.get('HOME')
 
+        if home_dir:
+            dir = QFileDialog.getExistingDirectory(
+                self, "Select Directory",
+                os.environ.get('HOME'),
+                QFileDialog.ShowDirsOnly #| QFileDialog.DontResolveSymlinks
+            )
+            self.__ui.project_path_line_edit.setText(dir)
+            return
+
+        print("something went wrong!")
+        
     def _save_width(self, text: str) -> None:
         self.width = int(text)
         if int(text) > 128:
